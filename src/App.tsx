@@ -42,7 +42,7 @@ function App() {
     setDnaSequence(value);
 
     if (/[^ATGC]/.test(value)) {
-      setError('❌ Invalid character! Only A, T, G, and C are allowed.');
+      setError('Invalid character! Only A, T, G, and C are allowed.');
     } else {
       setError('');
     }
@@ -74,7 +74,7 @@ function App() {
       setResult(data);
       saveToHistory(dnaSequence, data);
     } catch (err) {
-      setError("⚠️ Failed to connect to the server.");
+      setError(" Failed to connect to the server.");
     } finally {
       setLoading(false);
     }
